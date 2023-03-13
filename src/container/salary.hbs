@@ -1,0 +1,65 @@
+<div>
+    <header>
+        <div>
+            <h1>{{name.firstname}} {{name.lastname}}</h1>
+        </div>
+        <div>
+            <b>{{position}}</b>
+        </div>
+
+        <br>
+
+        <div>
+            <em>
+                {{salary}}
+            </em>
+        </div>
+
+        <br>
+        <hr>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h2>Summary</h2>
+            </div>
+            <div>
+                <p>
+                    Open-minded for new technologies, with 1 years of experience in development. Whenever I start to
+                    work on a new project I learn the domain and try to understand the idea of the project. Good team
+                    player, every colleague is a friend to me.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Other experience</h2>
+            </div>
+            <div>
+                <p>
+                    Pet project for parsing sport betting data from different platforms ( odds ) and sport statistics (
+                    tournament position, goals etc), analyzing by simple mathematics models and preparing probability
+                    for such events like: money line - first win / draw / second win, totals etc.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <br>
+
+        {{#with social}}
+
+        {{> link data=email}}
+        {{> link data=phone}}
+        {{> link data=linkedin}}
+
+
+
+        {{/with}}
+    </footer>
+
+</div>

@@ -1,0 +1,107 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+	{{#with bio}}
+	<main>
+		<div>
+			{{> title data='Bio' big=true}}
+			<hr>
+		</div>
+		<div>
+			<h2>{{name}}</h2>
+		</div>
+		<div> <em>Birthdate:</em> {{birthdate}} ear
+		</div>
+		<p> <em>in</em> {{ birthplace}}</p>
+		<div> <em>deathdate:</em> {{deathdate}}</div>
+		<br>
+		<div> <em>deathplace:</em>{{deathplace}}</div>
+		<br>
+		<div> <em> nationality:</em>{{deathplace}}</div>
+		<br>
+		<div> <em> occupation:</em>{{occupation}}</div>
+		<h2>{{> title data='Known_for' big=true }}</h2>
+		{{#each known_for}}
+		<ul>
+			<li>{{this}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h3> Education</h3>
+		{{#each education}}
+		<ul>
+			<li> degree: {{degree}}</li>
+			<li>field: {{field}}</li>
+			<li>institution: {{institution}}</li>
+			<li>year: {{year}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		{{> title data='Notable publications' big=true}}
+		{{#each notable_publications}}
+		<ul>
+			<li> title: {{ title}}</li>
+			<li> year: {{ year}}</li>
+			<li> publisher: {{ publisher}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h2> Partners</h2>
+		{{#each partners}}
+		<ul>
+			<li> name: {{ name}}</li>
+			<li> relationship: {{ relationship}}</li>
+			<li> years: {{ years}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h3> Awards:</h3>
+		{{#each awards}}
+		<ul>
+			<li>title: {{title}}</li>
+			<li> year: {{year}}</li>
+			<li> description: {{description}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h3>Influences</h3>
+		{{#each influences}}
+		<ul>
+			<li>{{this}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h3>Influenced</h3>
+		{{#each influenced}}
+		<ul>
+			<li>{{this}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h3>Quotes</h3>
+		{{#each quotes}}
+		<ul>
+			<li>{{this}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h3>Major_discoveries</h3>
+		{{#each major_discoveries}}
+		<ul>
+			<li>title: {{title}}</li>
+			<li>year {{year}}</li>
+			<li> description: {{ description}}</li>
+		</ul>
+		{{/each}}
+		<br>
+		<h3>Contributions:</h3>
+		{{#with contributions}}
+		<h4> {{title}}</h4>
+		<p> {{ description}} <br>{{ year}}</p>
+		<p>{{field}}</p>
+		{{/with}}
+		{{/with}}
+</div>

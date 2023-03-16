@@ -243,8 +243,6 @@ router.get('/work', function (req, res) {
   })
 })
 
-// =================
-
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
 

@@ -1,0 +1,85 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+
+    <main>
+        <div>
+            {{> title data='JS' big=true}}
+            <h2><em>Subject : </em> {{name}}</h2>
+            <br>
+            {{#with description}}
+            <ul>
+                <li><b>{{this}}</b> </li>
+            </ul>
+            {{/with}}
+
+            {{#with history}}
+            <p><em>In: {{year}}</em> </p>
+            <p><b>founder: {{founder}}</b> </p>
+            {{/with}}
+            <br>
+            <h3> Types:</h3>
+            {{#each types}}
+            <ul>
+                <li> <em>{{this}}</em> </li>
+            </ul>
+            {{/each}}
+            <br>
+
+            <h3>Syntax:</h3>
+            {{#with syntax}}
+
+            <ul>
+                <li><em>{{variables}}</em> </li>
+                <br>
+                <li><em>{{functions}}</em> </li>
+                <br>
+                <li><em>{{conditionals}}</em> </li>
+                <br>
+                <li><em>{{loops}}</em> </li>
+                <br>
+                <li><em>{{classes}}</em> </li>
+            </ul>
+            {{/with}}
+            <br>
+            <h3>Features:</h3>
+            {{#each features}}
+            <ul>
+                <li> <em>{{this}}</em> </li>
+            </ul>
+            {{/each}}
+            <br>
+            <h3>Libraries:</h3>
+            {{#each libraries}}
+            <ul>
+                <li> <em>{{this}}</em> </li>
+            </ul>
+            {{/each}}
+            <br>
+            <h3> Tools:</h3>
+            {{#each tools}}
+            <ul>
+                <li> <em>{{this}}</em> </li>
+            </ul>
+            {{/each}}
+            <br>
+
+            {{#each community}}
+            <ul>
+                <li> <b>{{name}}</b></li>
+                <li>({{type}})</li>
+            </ul>
+            {{/each}}
+
+
+        </div>
+    </main>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}

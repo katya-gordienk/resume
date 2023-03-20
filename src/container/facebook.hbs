@@ -1,0 +1,70 @@
+<div>
+    <main>
+
+        <h1> {{> title data='Facebook'big=true }}</h1>
+        <hr>
+
+        <h3>Users</h3>
+        {{#if users}}
+        {{#each users}}
+        <ul>
+            <li>(id: {{id}})
+                {{name}}, {{gender}}, {{age}} </li>
+        </ul>
+        <br>
+        <b>Friends</b>
+        {{#if friends}}
+        {{#each friends}}
+        <li>(id: {{id}}), {{name}} {{gender}}, {{age}} </li>
+        <br>
+        {{#if mutual_friends}}
+        {{#each mutual_friends}}
+        <br>
+        <li>(id : {{id}}), {{name}} {{gender}}, {{age}} </li>
+
+        {{/each}}
+        {{/if}}
+        <br>
+        <b>Groups</b>
+        {{#if groups}}
+        {{#each groups}}
+        <li>(id: {{id}}), {{name}} {{description}}</li>
+
+        <b> Members</b>
+        {{#if members}}
+        <br>
+        {{#each members}}
+        <br>
+        (id: {{id}}), {{name}} {{gender}}, {{age}}
+        <br>
+        {{/each}}
+        {{/if}}
+
+        {{/each}}
+        {{/if}}
+        {{/each}}
+        {{/if}}
+        <br>
+        {{#if groups}}
+        <br>
+        {{#each groups}}
+        <br>
+        <li>(id: {{id}}), {{name}} {{description}}</li>
+        <br>
+        <b> Members</b>
+        {{#if members}}
+        <br>
+        {{#each members}}
+        <br>
+        (id: {{id}}), {{name}} {{gender}}, {{age}}
+        {{/each}}
+        {{/if}}
+
+        {{/each}}
+        {{/if}}
+
+        {{/each}}
+        {{/if}}
+</div>
+</main>
+</div>

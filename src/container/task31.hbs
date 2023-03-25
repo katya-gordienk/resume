@@ -39,31 +39,23 @@
         <br>
     </div>
     <br>
-
-    {{#with city}}
     <section class="col-12">
-        <div class="h2">{{title}}</div>
-        {{/with}}
+        <div class="h2">{{city.title}}</div>
         <br>
         <div class="container card">
-            {{#each city.cards}}
-
-            <div class="card col-12">
-                <img class="card-img-top" src="{{picture.src}}" alt="{{picture.alt}}">
-                <h5 class="card-title">{{title}}</h5>
-                <p class="card-text"> {{description}}</p>
-                <br>
-                <a href="{{button.href}}" class="btn btn-primary">{{button.text}}</a>
+            <div class="row">
+                {{#each city.cards}}
+                <div class="card col-6">
+                    <img class="card-img-top" src="{{picture.src}}" alt="{{picture.alt}}">
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text"> {{description}}</p>
+                    <br>
+                    <a href="{{button.href}}" class="btn btn-primary">{{button.text}}</a>
+                </div>
+                {{/each}}
             </div>
-            <br>
-            <br>
-            <br>
         </div>
-        </div>
-        {{/each}}
-        </div>
-        </div>
-        <hr>
+
         {{#with winner}}
         <h2 class="card title">{{title}}</h2>
         {{#with table}}
@@ -97,26 +89,23 @@
     <section>
         {{#with gallery}}
         <div class="display-3 card title">{{title}}</div>
-        {{!-- <div class="row gx-2 gy-1"> --}}
-            <div class="col-12 mt-10">
-                <div class="container card">
-
-                    {{#each cards}}
-                    <h5 class="card-title">{{name}}</h5>
-                    <ul class="list-group">
-                        {{#each this.items}}
-                        <li class="list-group-item">{{this}}</li>
-                        {{/each}}
-                    </ul>
+        <div class="col-12 mt-10">
+            <div class="container card">
+                {{#each cards}}
+                <h5 class="card-title">{{name}}</h5>
+                <ul class="list-group">
+                    {{#each this.items}}
+                    <li class="list-group-item">{{this}}</li>
                     {{/each}}
-                </div>
+                </ul>
+                {{/each}}
             </div>
+        </div>
         </div>
         {{/with}}
     </section>
 
     <div class="row gx-5">
-
         <div class="container mt-10">
             {{#with relaxion}}
             <h2>{{title}}</h2>
@@ -141,7 +130,6 @@
                             {{/if}}
                         </div>
                     </div>
-
                     {{/with}}
 
                 </div>

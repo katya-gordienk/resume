@@ -1114,6 +1114,12 @@ router.get('/task22', function (req, res) {
   })
 })
 
+router.get('/bootstrap', function (req, res) {
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+  })
+})
+
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
 

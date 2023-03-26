@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="mb-4">
 	{{#with main}}
 	<main>
 		<section>
@@ -52,18 +52,13 @@
 								<div>
 									{{> link text=name href=url blank=true noLine=true }}
 								</div>
-								<br>
-
-								<div>
+								<div class="mb-4">
 									<p>{{about}}</p>
 								</div>
-
-								<br>
-								<div>
+								<div class="mb-4">
 									<em> Project Stacks ({{stacksAmount}})</em>
 								</div>
-								<br>
-								<div>
+								<div class="py-4">
 									<ul>
 										{{#each stacks}}
 										<li>
@@ -73,32 +68,29 @@
 									</ul>
 								</div>
 
-
-								<br>
-								<div>
+								<div class="mb-5">
 									<em>Project awards ({{awarsdAmount}})</em>
 								</div>
-
-								<br>
-
-								<div>
-									<ul>
-										{{#each awards}}
-										<li>
-											{{name}}
-										</li>
-										{{/each}}
-									</ul>
-								</div>
+								<div class="mb-3">
+									<div>
+										<ul class=>
+											{{#each awards}}
+											<li>
+												{{name}}
+											</li>
+											{{/each}}
+										</ul>
+									</div>
 							</li>
-							{{/each}}
-						</ul>
-					</li>
-					<br>
-					{{/each}}
-				</ul>
 			</div>
-		</section>
-	</main>
-	{{/with}}
+			{{/each}}
+			</ul>
+			</li>
+			<br>
+			{{/each}}
+			</ul>
+</div>
+</section>
+</main>
+{{/with}}
 </div>

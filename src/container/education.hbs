@@ -6,7 +6,7 @@
             <hr>
             <h1> {{> title data='My education:' big=true}}
             </h1>
-            <ul>
+            <ul class="ps-5">
                 {{#each education}}
                 <li>{{name}}</li>
                 {{#if isEnd}} (В процесі) {{/if}}
@@ -17,7 +17,7 @@
 
         <section>
             <h3>{{> title data="My certificates:"}}</h3>
-            <ul>
+            <ul class="ps-5">
                 {{#each certificates}}
 
                 <li>{{name}} ({{id}})</li>

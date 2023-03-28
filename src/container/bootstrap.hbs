@@ -74,4 +74,22 @@
             </div>
         </div>
 
+        <div>
+            <ul>
+                {{#each list}}
+                <li>
+                    <button {{#if @last}} disabled {{/if}}>{{name}} - {{@index}}</button>
+                </li>
+                {{/each}}
+                <br>
+                <br>
+                {{#each users}}
+                <li>
+                    {{!-- {{@index}} --}}
+                    {{@key}}: {{#if value}}{{value}}{{else}}{{text}}{{/if}},
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
     </main>

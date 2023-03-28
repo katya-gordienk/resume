@@ -1,0 +1,22 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+	<ul>
+		{{#each list}}
+		<li>
+			<span>{{name}}</span>
+		</li>
+		{{/each}}
+		<br>
+		<br>
+		{{#each user}}
+		<li>
+			{{this}}
+		</li>
+		{{/each}}
+		jjjjjj
+	</ul>
+</div>

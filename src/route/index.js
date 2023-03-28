@@ -1117,6 +1117,28 @@ router.get('/task22', function (req, res) {
 router.get('/bootstrap', function (req, res) {
   res.render('bootstrap', {
     layout: 'bootstrap',
+    list: [
+      { name: 'First Button' },
+      { name: 'Secondary Button' },
+      { name: 'Error Button' },
+      { name: 'Submit Button' },
+    ],
+
+    users: {
+      name: {
+        value: 'Ivan',
+        text: 'Ivanov',
+      },
+      role: {
+        text: 'Admin',
+      },
+      isConfirm: {
+        value: true,
+      },
+      age: {
+        value: 32,
+      },
+    },
   })
 })
 

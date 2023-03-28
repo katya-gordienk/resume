@@ -1,0 +1,27 @@
+{{!-- Navigation --}}
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col-12">
+                <div class="nav nav-tabs">
+                    <div class="d-flex">
+                        <div class="nav-item ms-4 mt-2">
+                            <h2 class="">{{navigation.Logo}}</h2>
+                        </div>
+                    </div>
+                    <div class="d-flex ms-auto">
+                        {{#each navigation.links}}
+                        <div class="nav-item">
+                            <a href={{href}} class="nav-link">{{text}}</a>
+                        </div>
+                        {{/each}}
+                        <div class="nav-item">
+                            <a href="#" class="nav-link disabled">Disabled</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

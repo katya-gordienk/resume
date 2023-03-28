@@ -1,0 +1,137 @@
+<main>
+
+    {{!-- Navigation --}}
+    {{!-- <div>{{> shopheder}} --}}
+    </div>
+
+
+    {{!-- Breadcrumb --}}
+    <nav class="mt-3">
+        <ul class="breadcrumb ms-3 mb-5">
+            {{#each breadcrumb}}
+            {{#if url}}
+            <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+            {{else}}
+            <li class="breadcrumb-item active">{{name}}</li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </nav>
+
+    {{!-- ProductData --}}
+    {{#with productData}}
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3">
+                    <img class="card-img-top mb-3" src="{{img}}" alt="{{info.title}}">
+                    <div class="card-title ">
+                        <h4 class="card-title ps-3">{{info.title}}</h4>
+                    </div>
+                    <p class="card-text ps-3 pb-1 ">{{info.about}}</p>
+                    <h5 class="card-subtitle mb-2 text-dark  ps-3 pb-3"> Price : {{info.price}}
+                    </h5>
+
+                    <div class="ms-3 mb-5  mt-3">
+                        {{#each info.category}}
+                        {{#if isHot}}
+                        <span class="badge rounded-pill text-bg-warning text-light">{{name}}</span>
+                        {{/if}}
+                        {{#if isNew}}
+                        <span class="badge rounded-pill text-bg-primary text-light">{{name}}</span>
+                        {{/if}}
+                        {{#if isBonus }}
+                        <span class="badge rounded-pill text-bg-info text-light">{{name}}</span>
+                        {{/if}}
+                        {{/each}}
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            {{!-- actionList --}}
+
+            <div class="col-6">
+                <div class="card p-2 ms-2 mb-4 mt-2">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                {{#each item.head}}
+                                <th>{{this}}</th>
+                                {{/each}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                {{#each item.body}}
+                                <td>{{this.[0]}}</td>
+                                <td>{{this.[1]}}</td>
+                                <td>{{this.[2]}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="card mb-2">
+                    <div class="card-header">
+                        <div class="card-title">
+                            {{param.title}}
+                        </div>
+                        <div class="card-body">
+                            {{#each param.list}}
+                            <p>{{this}}</p>
+                            {{/each}}
+
+                        </div>
+                    </div>
+                </div>
+                {{#with alert}}
+                <div class="alert alert-danger">
+                    {{#if isError}}
+                    <p>{{text}}</p>
+                    {{/if}}
+                </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+    {{/with}}
+
+
+    <div class="container">
+        <div class="col-9 mb-3 ">
+            {{#each productData.actionList}}
+            {{#if isWarning}}
+            <a href="#" type="btn" class="btn btn-warning text-light m-3">{{name}}</a>
+            {{/if}}
+            {{#if isError}}
+            <a href="#" type="btn" class="btn btn-outline-danger m-3">{{name}}</a>
+            {{/if}}
+            {{#if isSuccess}}
+            <a href="#" type="btn" class="btn btn-success text-light m-3">{{name}}</a>
+            {{/if}}
+            {{#if isGood}}
+            <a href="#" type="btn" class="btn btn-outline-success m-3">{{name}}</a>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+
+    {{!--goodsOtherBlock Cards --}}
+
+    <div>{{> shopcard}}</div>
+
+
+
+    {{!-- Service --}}
+    <div>{{> shopaction}}</div>
+
+
+
+
+</main>

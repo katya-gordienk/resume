@@ -1,0 +1,18 @@
+{{!-- Footer --}}
+<div class="container mb-4">
+    {{#with footer}}
+    <div class="row g-2 mb-4">
+        {{#each this}}
+        <div class="col ">
+            <div class="nav">
+                <div class="nav-item">
+                    {{#each this}}
+                    <a class="nav-link active mb-4" href="{{link}}">{{text}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/with}}

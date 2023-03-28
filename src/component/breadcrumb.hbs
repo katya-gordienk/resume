@@ -1,0 +1,12 @@
+{{!-- Breadcrumb --}}
+<nav class="mt-3">
+    <ul class="breadcrumb ms-3 mb-5">
+        {{#each breadcrumb}}
+        {{#if url}}
+        <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+        {{else}}
+        <li class="breadcrumb-item active">{{name}}</li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</nav>

@@ -1,6 +1,9 @@
 html {
   max-width: 1000px;
 }
+ li {
+  list-style: none;
+ }
 
 /* body {
   margin: 32px;

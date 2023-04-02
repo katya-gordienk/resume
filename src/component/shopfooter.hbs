@@ -8,6 +8,9 @@
                 <div class="nav-item">
                     {{#each this}}
                     <a class="nav-link active mb-4" href="{{link}}">{{text}}</a>
+                    {{#if @last}}
+                    <a class="nav-link disabled mb-4" href="{{link}}">{{text}}</a>
+                    {{/if}}
                     {{/each}}
                 </div>
             </div>

@@ -1,0 +1,47 @@
+{{!-- GoodBlock --}}
+{{#each goodsBlock}}
+<div class="col-12 pt-2 pb-3">
+    <div class="card mb-3">
+        <div class=" row card-body">
+            <img class="col-2" src="{{image}}" alt="{{name}}">
+
+            <div class="col-4">
+                <div class="row">
+                    <div class=" h5">{{name}}</div>
+                    <div>{{description}}</div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="row">
+
+                    <div class="h5 text-center p-3">{{price.title}}: </div>
+                    <div class="h5 text-center">{{price.value}}</div>
+                </div>
+            </div>
+            <div class="col-2 mb-3">
+                <div class="row text-center p-3 ">
+                    <div class="h5 mt-3">
+                        {{amount}} </div>
+                </div>
+
+            </div>
+            <div class="col-2 mt-2 ">
+                <div class="row mb-3 ms-4">
+                    {{#each buttons}}
+                    {{#if isPrimary}}
+                    <div class="mb-3"> <button class="btn btn-primary">{{text}}</button>
+                    </div>
+
+                    {{else}}
+                    <div> <button class="btn btn-outline-danger ">{{text}}</button></div>
+
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+<hr class="mb-3">

@@ -1,0 +1,46 @@
+{{!--
+Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
+І котрий обгортає код container файлів для будь-яких ендпоїнтів
+--}}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		<div class="mb-4 text center">{{page.title}}</div>
+	</title>
+	<meta charset='utf-8' />
+	<link href='css/index.css' rel='stylesheet' />
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+	{{!-- icon --}}
+	<script src="https://kit.fontawesome.com/2817d8e005.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
+<main>
+	<header>
+		<div class="row">
+			<div class="col-6 mt-4">
+				<div class="ps-4 mb-4 text center">{{page.title}}</div>
+			</div>
+			<div class="col-6 mt-4">{{page.subtitle}}</div>
+		</div>
+		<hr>
+	</header>
+	{{{body}}}
+	{{> nav}}
+
+	{{> footer}}
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</main>
+</body>
+
+
+</html>

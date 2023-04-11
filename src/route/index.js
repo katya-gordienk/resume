@@ -5,39 +5,48 @@ const router = express.Router()
 
 // ================================================================
 
-// var address = 'Ukrain, Kiev, bulvar Shevchenko 22'
-
 var header = {
   name: {
-    firstname: 'Ivan',
-    lastname: 'Ivanov',
+    firstname: 'Katya',
+    lastname: 'Gordienko',
   },
   position: 'Junior Fullstack JS Developer',
   salary: '600$ в місяць',
-  address: 'Ukrain, Kiev, bulvar Shevchenko 22',
+  address: 'Ukrain, Kiev',
 }
 
 var footer = {
   social: {
     email: {
-      text: 'ivanov@mail.com',
-      href: 'mailto:ivanov@mail.com',
+      text: '13gordienko@gmail.com',
+      href: 'mailto:13gordienko@gmail.com',
     },
 
     phone: {
-      text: '+380670000123',
-      href: 'tel:+380670000123',
+      text: '+380688083109',
+      href: 'tel:+380688083109',
     },
 
     linkedin: {
       text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/dmytro-test',
+      href: 'https://www.linkedin.com/in/katya-test',
+    },
+    project: {
+      text: 'GitHub',
+      href: 'https://github.com/katya-gordienk/resume',
     },
   },
 }
 
-//                  ↑↑ сюди вводимо JSON дані
-// =================
+router.get('/', function (req, res) {
+  res.render('index', {
+    layout: 'index',
+    page: {
+      title: 'Katya Gordienko',
+      subtitle: 'Resume',
+    },
+  })
+})
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/summary', function (req, res) {

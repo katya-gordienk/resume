@@ -6,27 +6,41 @@
 <div>
 	{{#with main}}
 	<main>
-		<section class="mb-5">
-			<div>
-				<h2>{{> title data=summary.title}} </h2>
+		<div class="row">
+			<section class="mb-5">
+				<div>
 
-			</div>
-			<div>
-				<p>
-					{{summary.text}}
-				</p>
-			</div>
-		</section>
+					<div class="col-8 ms-2">
+						<div class="card">
+							<div class="card-header text-center">
+								<h2>{{> title data=summary.title}} </h2>
+							</div>
+							<div>
+								<p>
+									{{summary.text}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-		<section>
-			<div>
-				<h2>{{experiens.title}}</h2>
-			</div>
-			<div>
-				<p>
-					{{> experiens}}
-				</p>
-			</div>
-		</section>
-	</main>
-	{{/with}}
+			</section>
+
+			<section>
+				<div class="col-8 ms-2">
+					<div class="card text-center">
+						<div class="card-header">
+							<h2>{{experiens.title}}</h2>
+						</div>
+						<div>
+							<p>
+								{{> experiens}}
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+</div>
+</main>
+{{/with}}

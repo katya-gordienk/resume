@@ -3,29 +3,48 @@
     {{#with main}}
     <main>
         <section>
-            <hr>
-            <h1> {{> title data='My education:' big=true}}
-            </h1>
-            <ul class="ps-5">
-                {{#each education}}
-                <li>{{name}}</li>
-                {{#if isEnd}} (В процесі) {{/if}}
-                {{/each}}
-            </ul>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h1> {{> title data='My education:' big=true}}
+                                    </h1>
+                                </div>
+                                <ul class="ps-5">
+                                    {{#each education}}
+                                    <li>{{name}}</li>
+                                    {{#if isEnd}} (В процесі) {{/if}}
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
         </section>
 
         <section>
-            <h3>{{> title data="My certificates:"}}</h3>
-            <ul class="ps-5">
-                {{#each certificates}}
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
 
-                <li>{{name}} ({{id}})</li>
+                        <h3>{{> title data="My certificates:"}}</h3>
+                    </div>
+                    <ul class="ps-5">
+                        <div class="card-body">
+                            {{#each certificates}}
 
-                {{/each}}
-            </ul>
+                            <li>{{name}} ({{id}})</li>
+
+                            {{/each}}
+                        </div>
+                    </ul>
         </section>
     </main>
     {{/with}}
+    </div>
+    </div>
 
 </main>

@@ -8,46 +8,60 @@
         {{#with main}}
         <main>
             <section>
-                <h3> {{> title data='All skills:'big=true }}</h3>
-                <ul>
-                    {{#each skills}}
-                    <li>
-                        {{name}}
-                        {{#if point includeZero=true}} ({{point}}) {{/if}}
-                        {{#if isTop}} (top!) {{/if}}
 
-                        {{#unless point includeZero=true}} (Не вивчаємо) {{/unless}}
-                        {{#unless point}}
-                        {{#if point includeZero=true}}
-                        (Зараз вивчаємо)
-                        {{/if}}
-                        {{/unless}}
-                    </li>
-                    {{/each}}
-                </ul>
-            </section>
+                <div class="card col-6 mb-4">
+                    <div class="card-header">
 
-            <section>
-                <h3>{{> title data="My hobbies:"}}</h3>
 
-                <ul>
+                        <h3> {{> title data='All skills:'big=true }}</h3>
+                    </div>
 
-                    {{#each hobbies}}
-                    <li>
-                        {{name}}
-                        {{#if isMain}} (favourite) {{/if}}
-                    </li>
 
-                    {{/each}}
+                    <ul>
+                        {{#each skills}}
+                        <li>
+                            {{name}}
+                            {{#if point includeZero=true}} ({{point}}) {{/if}}
+                            {{#if isTop}} (top!) {{/if}}
 
-                </ul>
+                            {{#unless point includeZero=true}} (Не вивчаємо) {{/unless}}
+                            {{#unless point}}
+                            {{#if point includeZero=true}}
+                            (Зараз вивчаємо)
+                            {{/if}}
+                            {{/unless}}
+                        </li>
+                        {{/each}}
+
+                    </ul>
+                </div>
 
             </section>
-        </main>
-        {{/with}}
-    </nav>
-
 </div>
+</section>
+
+<section>
+    <div class="card col-6 mb-4">
+        <div class="card-header">
+            <h3>{{> title data="My hobbies:"}}</h3>
+        </div>
+
+        <ul>
+            {{#each hobbies}}
+            <li>
+                {{name}}
+                {{#if isMain}} (favourite) {{/if}}
+            </li>
+            {{/each}}
+
+        </ul>
+        {{/with}}
+        </nav>
+
+    </div>
+</section>
+</main>
+
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
